@@ -39,6 +39,10 @@ const io = new Server(server, {
   },
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 // Make io available in routes via req.app.get('io')
 app.set("io", io);
 
